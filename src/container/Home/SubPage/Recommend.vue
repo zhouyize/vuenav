@@ -1,30 +1,30 @@
-
 <template>
     <!--只能存在一个根容器-->
-    <div class="home">
-      <ul>
-        <router-link tag='li' to="/home/recommend">推荐</router-link>
-        <router-link tag='li' to="/home/hot">热门</router-link>
-      </ul>
-      <keep-alive>
-        <router-view />
-      </keep-alive>
-      <Nav />
+    <div class="">
+      推荐
     </div>
 </template>
 
-
-
 <script>
-
-    import Nav from '@/components/Nav'
-
     export default {
         name: '',
-        components:{
-          Nav
+        //props: ["",""],
+        props: {
+            //nick:{
+            //type:String,
+            //default:'国民老公'
+            //},
+
+
+            // 对象或数组默认值必须从一个工厂函数获取
+            //girlFriends:{
+            //type:Array,
+            //default:function(){
+            //return ['g1','g2']
+            //}
+            //}
         },
-        props: [],
+
         //所有的初始化状态全部放入data中
         data() {
             return {}
@@ -44,22 +44,6 @@
 Add "scoped" attribute to limit CSS to this component only
 添加scoped属性限制样式只在当前组件中生效
 -->
-<style scoped>
-
-  ul{
-    with:100%;
-    text-align:center;
-    margin-top:20px;
-  }
-
-  ul li{
-    display: inline-block;
-    font-size:20px;
-    margin: 0 20px;
-  }
-
-  .active{
-    color: red;
-  }
+<style>
 
 </style>

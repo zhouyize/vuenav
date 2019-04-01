@@ -7,9 +7,13 @@ import Order from '@/container/Order'
 import ShopCar from '@/container/ShopCar'
 import NotFound from '@/container/NotFound'
 
+import Hot from '@/container/Home/SubPage/Hot'
+import Recommend from '@/container/Home/SubPage/Recommend'
+
 Vue.use(Router)
 
 export default new Router({
+  linkActiveClass:"active",
   routes: [
     {
       path:'*',
@@ -17,12 +21,23 @@ export default new Router({
     },
     {
       path:'/',
-      redirect:'/home'
+      redirect:'/home',
     },
     {
       path: '/home',
+      redirect:'/home/recommend',
       name: 'Home',
-      component: Home
+      component: Home,
+      children:[
+        {
+          path:'hot',
+          component:Hot
+        },
+        {
+          path:'recommend',
+          component:Recommend
+        }
+      ]
     },
     {
       path: '/mine',

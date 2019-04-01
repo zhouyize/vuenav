@@ -31,6 +31,7 @@ export default {
 
   body {
     line-height:1;
+    background: #f1f1f1;
   }
 
   a{
@@ -38,9 +39,10 @@ export default {
     padding:0;
     border:0;
     font-size:100%;
-    vertical-align:baseline;
-    background:transparent;
-
+    /*vertical-align:baseline;*/
+    /*background:transparent;*/
+    text-decoration: none;
+    color: #000;
   }
   a:hover,a:focus{
     text-decoration:none;
